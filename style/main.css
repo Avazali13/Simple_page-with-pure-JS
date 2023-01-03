@@ -88,6 +88,13 @@ body {
   transition: 1.5s;
 }
 
+.container4 {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 .slide2 {
   width: 100%;
   height: 100%;
