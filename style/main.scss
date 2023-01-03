@@ -96,6 +96,22 @@ position: relative;
     }
     }
 }
+
+.slide2{
+
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    transition: all 0.9s;
+    
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+}
+
 a{
     text-decoration: none;
     color:var(--angles);
@@ -216,6 +232,12 @@ a{
         color: var(--h2);
     }
 }
+
+.card{
+    position: absolute;
+    top: 130%;
+}
+
 .loginform{
     width: 23%;
     height: 43%;
@@ -279,7 +301,10 @@ a{
         color: var(--h2);
     }
 }
-
+.cart{
+    position: absolute;
+    top: 130%;
+}
 .container3{
     position: absolute;
     top: 50%;
@@ -291,7 +316,7 @@ a{
         background-color: var(--angles);
       &:hover{
        transition: calc(2s); 
-       transform: rotateZ(720deg);
+       transform: scale(1.3);
       }
 
     }
@@ -311,7 +336,7 @@ a{
     display: none;
 }
 .blur{
-    filter: blur(5px);
+    filter: blur(8px);
 }
 
 

@@ -2,20 +2,22 @@
 const pre=document.querySelector(".prebtn")
 const next=document.querySelector(".nextbtn")
 const alls=document.querySelectorAll('.slide')
+const all2=document.querySelectorAll('.slide2')
 
 
 let current=0
 let late=alls.length-1
+let late2=all2.length-1
 
   setInterval(function(abc){
     if(current<=0){
-        current=late;
+        current=late2;
     }
     else{
         current--;
     }
 
-    alls.forEach((slide, index)=>{
+    all2.forEach((slide, index)=>{
         slide.style.transform="translateX(" + 100 *(index - current)+ "%)" ;
     } ) ; 
 },2500)
@@ -51,37 +53,62 @@ next.addEventListener('click' , function(){
 
 
 
+
+
 // popup part
 
 
 var sign=document.querySelector('.signupform');
 var con=document.querySelector('.container')
 var log=document.querySelector('.loginform')
+var sign2=document.querySelector('.card');
+var log2=document.querySelector('.cart')
 
 
 
 first.addEventListener('click',()=>{
     sign.classList.remove('hidden')
+    sign2.classList.remove('hidden')
     con.classList.add("blur")
     log.classList.add('hidden')
+    log2.classList.add('hidden')
 });
 
 var cancel=document.querySelector(".x1")
 cancel.addEventListener("click",()=>{
     sign.classList.add('hidden')
+    sign2.classList.add('hidden')
+    con.classList.remove("blur");
+
+})
+
+var cancel=document.querySelector(".x4")
+cancel.addEventListener("click",()=>{
+    sign.classList.add('hidden')
+    sign2.classList.add('hidden')
     con.classList.remove("blur");
 
 })
 
 second.addEventListener('click',()=>{
 log.classList.remove('hidden')
+log2.classList.remove('hidden')
 con.classList.add("blur")
 sign.classList.add('hidden')
+sign2.classList.add('hidden')
 })
 
 var cancel2 =document.querySelector('.x2')
 cancel2.addEventListener('click',()=>{
     log.classList.add('hidden')
+    log2.classList.add('hidden')
+    con.classList.remove('blur')
+})
+
+var cancel2 =document.querySelector('.x5')
+cancel2.addEventListener('click',()=>{
+    log.classList.add('hidden')
+    log2.classList.add('hidden')
     con.classList.remove('blur')
 })
 
