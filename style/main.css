@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --angles:#fff;
+  --icon:#fff;
+  --navbarbg:rgba(0, 0, 0, 0.5);
+  --h2:#000;
+  --signlogbc:rgba(57, 211, 15, 0.401);
+  --refresh:#fff;
+  --h1color:rgba(0, 82, 27, 0.664);
+}
+
+.dark {
+  --angles:rgb(6, 6, 6);
+  --navbarbg: rgba(255, 255, 255, 0.163);
+  --icon:rgba(0, 0, 0, 0.5);
+  --h2:#fff;
+  --signlogbc:rgba(0, 0, 0, 0.8);
+  --refresh:rgba(215, 215, 215, 0.8);
+  --h1color:#000;
+}
+
+#top1 {
+  background-image: image();
+}
+#top1 .container .slider {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#top1 .container .h1 {
+  position: absolute;
+  top: 33%;
+  left: 25%;
+  font-size: 30px;
+  color: var(--h1color);
+  font-style: italic;
+}
+#top1 .container .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 0.9s;
+}
+#top1 .container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#top1 .container .fa-angle-left {
+  position: absolute;
+  z-index: 1;
+  color: var(--h2);
+  top: 50%;
+  left: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  border: 1px solid var(--angles);
+  border-radius: 100%;
+  padding: 10px 15px;
+  background-color: var(--angles);
+}
+#top1 .container .fa-angle-left:hover {
+  transform: scale(1.2);
+  transition: 1.5s;
+}
+#top1 .container .fa-angle-right {
+  position: absolute;
+  z-index: 1;
+  color: var(--h2);
+  top: 50%;
+  right: 40px;
+  font-size: 30px;
+  cursor: pointer;
+  border: 1px solid var(--angles);
+  border-radius: 100%;
+  padding: 10px 15px;
+  background-color: var(--angles);
+}
+#top1 .container .fa-angle-right:hover {
+  transform: scale(1.2);
+  transition: 1.5s;
+}
+
+a {
+  text-decoration: none;
+  color: var(--angles);
+}
+a:hover {
+  transition: 1.5s;
+  transform: scale(1.3);
+}
+
+.navbarbck {
+  background-color: var(--navbarbg);
+  height: 52px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navbarbck .navbar {
+  padding-top: 13px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+}
+.navbarbck .left {
+  display: flex;
+  color: var(--angles);
+  opacity: 0.8;
+}
+.navbarbck .left a {
+  padding-left: 6px;
+  padding-top: 3px;
+  color: var(--angles);
+}
+.navbarbck .left .fa-skull-crossbones {
+  font-size: 28px;
+  cursor: pointer;
+}
+.navbarbck .left .fa-skull-crossbones:hover {
+  transform: rotateZ(720deg);
+}
+.navbarbck .right {
+  display: flex;
+}
+.navbarbck .right h4 {
+  padding-right: 20px;
+}
+.navbarbck .right .fa-grip-lines-vertical {
+  padding-right: 15px;
+  padding-top: 2px;
+  color: var(--angles);
+}
+.navbarbck .right button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  color: var(--angles);
+  margin-left: 15px;
+  cursor: pointer;
+  padding-bottom: 7px;
+}
+.navbarbck .right #darkmode {
+  width: 25px;
+  background-color: var(--icon);
+  padding: 2px;
+}
+.navbarbck .right #refresh {
+  width: 25px;
+  background-color: var(--refresh);
+  padding: 2px;
+}
+
+.signupform {
+  width: 23%;
+  height: 43%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  background-color: var(--signlogbc);
+  text-align: center;
+}
+.signupform h2 {
+  color: var(--h2);
+}
+.signupform p {
+  color: var(--h2);
+}
+.signupform label {
+  padding: 8px;
+}
+.signupform .anime {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+.signupform #type:hover {
+  transform: scale(1.3);
+  transition: 2s;
+  color: rgb(13, 9, 28);
+  background-color: #fff;
+  border-color: #fff;
+}
+.signupform .fa-circle-xmark {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  color: var(--h2);
+}
+
+.loginform {
+  width: 23%;
+  height: 43%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  background-color: var(--signlogbc);
+  text-align: center;
+  padding-top: 15px;
+}
+.loginform .anime {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+}
+.loginform label input {
+  padding: 8px;
+  margin-top: 15px;
+}
+.loginform h2 {
+  color: var(--h2);
+}
+.loginform #check {
+  color: var(--h2);
+}
+.loginform h4 {
+  color: var(--angles);
+}
+.loginform .submits {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+}
+.loginform .submits h4 {
+  padding-top: 5px;
+}
+.loginform .submits #type1 {
+  background-color: var(--h2);
+  padding: 5px;
+  color: var(--angles);
+  cursor: pointer;
+}
+.loginform .submits #type1:hover {
+  transform: scale(1.3);
+  transition: 2s;
+  color: rgb(13, 9, 28);
+  background-color: #fff;
+  border-color: #fff;
+}
+.loginform .fa-circle-xmark {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+  color: var(--h2);
+}
+
+.container3 {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+.container3 #music {
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--h2);
+  background-color: var(--angles);
+}
+.container3 #music:hover {
+  transition: 2s;
+  transform: rotateZ(720deg);
+}
+
+.mp3 {
+  font-size: 35px;
+  color: var(--angles);
+  padding-top: 22px;
+}
+
+.hidden {
+  display: none;
+}
+
+.blur {
+  filter: blur(5px);
+}/*# sourceMappingURL=main.css.map */
